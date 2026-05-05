@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>心願承諾卡 - 雲端自動同步版</title>
+    <title> 心願承諾卡 - 同步版</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
     <style>
@@ -109,7 +109,7 @@
 
                 <div class="mt-12 flex justify-between items-end border-t pt-6">
                     <div class="text-xs text-gray-400">
-                        <p>雲端備案編號: #<span id="res-id"></span></p>
+                        <p>千禧備案編號: #<span id="res-id"></span></p>
                         <p>Status: Cloud Synchronized</p>
                     </div>
                     <div class="w-16 h-16 bg-gray-100 flex items-center justify-center rounded">
@@ -134,11 +134,11 @@
                 <div class="space-y-4">
                     <div>
                         <label class="text-sm text-gray-500 font-bold">被承諾對象 (逗號分隔)</label>
-                        <input type="text" id="admin-targets" class="w-full p-2 border rounded text-sm mt-1" value="父母,老師,自己,地球,另一半">
+                        <input type="text" id="admin-targets" class="w-full p-2 border rounded text-sm mt-1" value="寶眷,媽媽,社長,其他">
                     </div>
                     <div>
                         <label class="text-sm text-gray-500 font-bold">預設承諾項目 (逗號分隔)</label>
-                        <input type="text" id="admin-items" class="w-full p-2 border rounded text-sm mt-1" value="每天早睡早起,不再亂花錢,每週運動三次,準時交作業">
+                        <input type="text" id="admin-items" class="w-full p-2 border rounded text-sm mt-1" value="這週的洗碗我包了,這週的掃地我包了,這週的花費我包了,這週的洗衣我包了,幫忙洗腳一週,幫忙按摩一週,其他">
                     </div>
                     <button onclick="updateSettings()" class="bg-indigo-600 text-white px-4 py-2 rounded text-sm w-full font-bold shadow-md">更新名單設定</button>
                 </div>
