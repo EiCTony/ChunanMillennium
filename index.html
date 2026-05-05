@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>¤ßÄ@©Ó¿Õ¥d - ¶³ºİ¦Û°Ê¦P¨Bª©</title>
+    <title>å¿ƒé¡˜æ‰¿è«¾å¡ - é›²ç«¯åŒæ­¥ç‰ˆ</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
     <style>
@@ -44,53 +44,53 @@
 </head>
 <body class="min-h-screen pb-12">
 
-    <!-- ¾É¯èÄæ -->
+    <!-- å°èˆªæ¬„ -->
     <nav class="bg-white shadow-sm mb-6 p-4 flex justify-between items-center sticky top-0 z-50">
-        <h1 class="text-xl font-bold text-indigo-600">? ©Ó¿Õ¤§¬ù (¶³ºİ¦P¨B)</h1>
+        <h1 class="text-xl font-bold text-indigo-600">? æ‰¿è«¾ä¹‹ç´„ (é›²ç«¯åŒæ­¥)</h1>
         <div class="space-x-2">
-            <button onclick="showView('user')" class="px-3 py-1 rounded bg-indigo-100 text-indigo-700 text-sm">°Ñ»Pºİ</button>
-            <button onclick="showView('admin')" class="px-3 py-1 rounded bg-gray-100 text-gray-700 text-sm">ºŞ²z»P²Î­p</button>
+            <button onclick="showView('user')" class="px-3 py-1 rounded bg-indigo-100 text-indigo-700 text-sm">åƒèˆ‡ç«¯</button>
+            <button onclick="showView('admin')" class="px-3 py-1 rounded bg-gray-100 text-gray-700 text-sm">ç®¡ç†èˆ‡çµ±è¨ˆ</button>
         </div>
     </nav>
 
     <div class="max-w-md mx-auto px-4">
         
-        <!-- µø¹Ï¡G¨Ï¥ÎªÌ¶ñ¼g¤¶­± -->
+        <!-- è¦–åœ–ï¼šä½¿ç”¨è€…å¡«å¯«ä»‹é¢ -->
         <div id="view-user" class="view-section">
             <div class="bg-white rounded-3xl p-8 shadow-xl border border-indigo-50">
-                <h2 class="text-2xl font-bold text-center mb-2">³\¤U§Aªº©Ó¿Õ</h2>
-                <p class="text-gray-400 text-sm text-center mb-6">±zªº©Ó¿Õ±N¦Û°Ê°O¿ı©ó¶³ºİ¨t²Î</p>
+                <h2 class="text-2xl font-bold text-center mb-2">è¨±ä¸‹ä½ çš„æ‰¿è«¾</h2>
+                <p class="text-gray-400 text-sm text-center mb-6">æ‚¨çš„æ‰¿è«¾å°‡è‡ªå‹•è¨˜éŒ„æ–¼é›²ç«¯ç³»çµ±</p>
                 
                 <div class="space-y-4">
                     <div>
-                        <label class="block text-gray-700 mb-1 font-bold">±zªº©m¦W</label>
-                        <input type="text" id="user-name" placeholder="½Ğ¿é¤J¯u¹ê©m¦W" class="w-full p-3 border rounded-xl focus:ring-2 focus:ring-indigo-400 outline-none transition-all">
+                        <label class="block text-gray-700 mb-1 font-bold">æ‚¨çš„å§“å</label>
+                        <input type="text" id="user-name" placeholder="è«‹è¼¸å…¥çœŸå¯¦å§“å" class="w-full p-3 border rounded-xl focus:ring-2 focus:ring-indigo-400 outline-none transition-all">
                     </div>
 
                     <div>
-                        <label class="block text-gray-700 mb-1 font-bold">©Ó¿Õ¹ï¶H</label>
+                        <label class="block text-gray-700 mb-1 font-bold">æ‰¿è«¾å°è±¡</label>
                         <select id="target-select" class="w-full p-3 border rounded-xl bg-white"></select>
                     </div>
 
                     <div>
-                        <label class="block text-gray-700 mb-1 font-bold">©Ó¿Õ¶µ¥Ø</label>
+                        <label class="block text-gray-700 mb-1 font-bold">æ‰¿è«¾é …ç›®</label>
                         <select id="item-select" onchange="toggleCustomInput()" class="w-full p-3 border rounded-xl bg-white"></select>
                     </div>
 
                     <div id="custom-item-container" class="hidden">
-                        <label class="block text-gray-700 mb-1">½Ğ¿é¤J±zªº¦Û­q©Ó¿Õ</label>
-                        <textarea id="custom-item-text" rows="2" class="w-full p-3 border rounded-xl focus:ring-2 focus:ring-indigo-400 outline-none" placeholder="§Ú·Q©Ó¿Õ..."></textarea>
+                        <label class="block text-gray-700 mb-1">è«‹è¼¸å…¥æ‚¨çš„è‡ªè¨‚æ‰¿è«¾</label>
+                        <textarea id="custom-item-text" rows="2" class="w-full p-3 border rounded-xl focus:ring-2 focus:ring-indigo-400 outline-none" placeholder="æˆ‘æƒ³æ‰¿è«¾..."></textarea>
                     </div>
 
                     <button id="btn-submit" onclick="generateCard()" class="w-full card-gradient text-white font-bold py-4 rounded-xl shadow-lg flex justify-center items-center gap-2 hover:opacity-90 transition transform active:scale-95">
-                        <span id="btn-text">²£¥Í©Ó¿Õ¥d¨Ã¦P¨B</span>
+                        <span id="btn-text">ç”¢ç”Ÿæ‰¿è«¾å¡ä¸¦åŒæ­¥</span>
                         <div id="btn-loader" class="loading-spinner hidden"></div>
                     </button>
                 </div>
             </div>
         </div>
 
-        <!-- µø¹Ï¡G©Ó¿Õ¥dµ²ªG -->
+        <!-- è¦–åœ–ï¼šæ‰¿è«¾å¡çµæœ -->
         <div id="view-result" class="view-section hidden">
             <div id="card-display" class="commitment-card p-8 mb-6 border-t-8 border-indigo-600">
                 <div class="text-center mb-8">
@@ -99,17 +99,17 @@
                 </div>
                 
                 <div class="space-y-6 text-gray-800">
-                    <p class="text-lg">§Ú¬O <span id="res-name" class="font-bold border-b-2 border-gray-300 px-2 text-2xl text-indigo-700"></span>¡A</p>
-                    <p class="text-lg">¦b¦¹¾G­«¦V <span id="res-target" class="font-bold text-indigo-700"></span> ©Ó¿Õ¡G</p>
+                    <p class="text-lg">æˆ‘æ˜¯ <span id="res-name" class="font-bold border-b-2 border-gray-300 px-2 text-2xl text-indigo-700"></span>ï¼Œ</p>
+                    <p class="text-lg">åœ¨æ­¤é„­é‡å‘ <span id="res-target" class="font-bold text-indigo-700"></span> æ‰¿è«¾ï¼š</p>
                     <div class="bg-indigo-50 p-6 rounded-2xl italic text-xl text-center border border-indigo-100">
-                        ¡u<span id="res-item"></span>¡v
+                        ã€Œ<span id="res-item"></span>ã€
                     </div>
                     <p class="text-right text-gray-500 text-sm mt-8" id="res-date"></p>
                 </div>
 
                 <div class="mt-12 flex justify-between items-end border-t pt-6">
                     <div class="text-xs text-gray-400">
-                        <p>¶³ºİ³Æ®×½s¸¹: #<span id="res-id"></span></p>
+                        <p>åƒç¦§å‚™æ¡ˆç·¨è™Ÿ: #<span id="res-id"></span></p>
                         <p>Status: Cloud Synchronized</p>
                     </div>
                     <div class="w-16 h-16 bg-gray-100 flex items-center justify-center rounded">
@@ -118,45 +118,45 @@
                 </div>
             </div>
             
-            <button onclick="showView('user')" class="w-full bg-indigo-50 text-indigo-600 font-bold py-3 rounded-xl mb-4 border border-indigo-200">¦AÃ±¤@±i·s©Ó¿Õ</button>
-            <p class="text-center text-gray-500 text-[10px]">±z¥i¥Hªø«ö¥d¤ù©ÎºI¹Ï«O¦s¦¹©Ó¿ÕÃÒ©ú</p>
+            <button onclick="showView('user')" class="w-full bg-indigo-50 text-indigo-600 font-bold py-3 rounded-xl mb-4 border border-indigo-200">å†ç°½ä¸€å¼µæ–°æ‰¿è«¾</button>
+            <p class="text-center text-gray-500 text-[10px]">æ‚¨å¯ä»¥é•·æŒ‰å¡ç‰‡æˆ–æˆªåœ–ä¿å­˜æ­¤æ‰¿è«¾è­‰æ˜</p>
         </div>
 
-        <!-- µø¹Ï¡GºŞ²zºİ»P±Æ¦æº] -->
+        <!-- è¦–åœ–ï¼šç®¡ç†ç«¯èˆ‡æ’è¡Œæ¦œ -->
         <div id="view-admin" class="view-section hidden">
             <div class="bg-green-600 text-white rounded-2xl p-6 shadow-md mb-6">
-                <h3 class="font-bold text-lg mb-2 flex items-center gap-2">? ¶³ºİªA°È¤w±Ò°Ê</h3>
-                <p class="text-xs text-green-100">¥Ø«e¸ê®Æ±N¦P¨B¦Ü±zªº³Ì·s Google Apps Script ºô§}¡C</p>
+                <h3 class="font-bold text-lg mb-2 flex items-center gap-2">? é›²ç«¯æœå‹™å·²å•Ÿå‹•</h3>
+                <p class="text-xs text-green-100">ç›®å‰è³‡æ–™å°‡åŒæ­¥è‡³æ‚¨çš„æœ€æ–° Google Apps Script ç¶²å€ã€‚</p>
             </div>
 
             <div class="bg-white rounded-2xl p-6 shadow-md mb-6">
-                <h3 class="font-bold text-lg mb-4 border-b pb-2">?? °òÂ¦³]©w</h3>
+                <h3 class="font-bold text-lg mb-4 border-b pb-2">?? åŸºç¤è¨­å®š</h3>
                 <div class="space-y-4">
                     <div>
-                        <label class="text-sm text-gray-500 font-bold">³Q©Ó¿Õ¹ï¶H (³r¸¹¤À¹j)</label>
-                        <input type="text" id="admin-targets" class="w-full p-2 border rounded text-sm mt-1" value="¤÷¥À,¦Ñ®v,¦Û¤v,¦a²y,¥t¤@¥b">
+                        <label class="text-sm text-gray-500 font-bold">è¢«æ‰¿è«¾å°è±¡ (é€—è™Ÿåˆ†éš”)</label>
+                        <input type="text" id="admin-targets" class="w-full p-2 border rounded text-sm mt-1" value="å¯¶çœ·,åƒç¦§ç¤¾,è‡ªå·±,å…¶ä»–">
                     </div>
                     <div>
-                        <label class="text-sm text-gray-500 font-bold">¹w³]©Ó¿Õ¶µ¥Ø (³r¸¹¤À¹j)</label>
-                        <input type="text" id="admin-items" class="w-full p-2 border rounded text-sm mt-1" value="¨C¤Ñ¦­ºÎ¦­°_,¤£¦A¶Ãªá¿ú,¨C¶g¹B°Ê¤T¦¸,·Ç®É¥æ§@·~">
+                        <label class="text-sm text-gray-500 font-bold">é è¨­æ‰¿è«¾é …ç›® (é€—è™Ÿåˆ†éš”)</label>
+                        <input type="text" id="admin-items" class="w-full p-2 border rounded text-sm mt-1" value="å¹«æ´—è…³ä¸€æ¬¡,é€™é€±çš„æ´—ç¢—æˆ‘åŒ…äº†,é€™é€±çš„æ´—è¡£æœæˆ‘åŒ…äº†,é€™é€±çš„æ‹–åœ°æˆ‘åŒ…äº†,å…¶ä»–">
                     </div>
-                    <button onclick="updateSettings()" class="bg-indigo-600 text-white px-4 py-2 rounded text-sm w-full font-bold shadow-md">§ó·s¦W³æ³]©w</button>
+                    <button onclick="updateSettings()" class="bg-indigo-600 text-white px-4 py-2 rounded text-sm w-full font-bold shadow-md">æ›´æ–°åå–®è¨­å®š</button>
                 </div>
                 <div class="mt-4 pt-4 border-t">
-                    <button onclick="clearLocalData()" class="text-red-500 text-xs hover:underline">?? ²MªÅ¥»¦a¼È¦s¼Æ¾Ú (¤£¼vÅT¶³ºİ)</button>
+                    <button onclick="clearLocalData()" class="text-red-500 text-xs hover:underline">?? æ¸…ç©ºæœ¬åœ°æš«å­˜æ•¸æ“š (ä¸å½±éŸ¿é›²ç«¯)</button>
                 </div>
             </div>
 
             <div class="bg-white rounded-2xl p-6 shadow-md">
-                <h3 class="font-bold text-lg mb-4">?? ¬¡°Ê§Y®É³øªí (¥Ñ¤Ö¦Ü¦h)</h3>
+                <h3 class="font-bold text-lg mb-4">?? æ´»å‹•å³æ™‚å ±è¡¨ (ç”±å°‘è‡³å¤š)</h3>
                 
                 <div class="mb-6">
-                    <h4 class="text-sm font-bold text-gray-400 mb-2 uppercase tracking-tighter">¼öªù©Ó¿Õ¶µ²Î­p</h4>
+                    <h4 class="text-sm font-bold text-gray-400 mb-2 uppercase tracking-tighter">ç†±é–€æ‰¿è«¾é …çµ±è¨ˆ</h4>
                     <div id="stats-container" class="space-y-2"></div>
                 </div>
 
                 <div>
-                    <h4 class="text-sm font-bold text-gray-400 mb-2 uppercase tracking-tighter">³Ì·s©Ó¿Õ¦W³æ</h4>
+                    <h4 class="text-sm font-bold text-gray-400 mb-2 uppercase tracking-tighter">æœ€æ–°æ‰¿è«¾åå–®</h4>
                     <ul id="user-list" class="divide-y text-sm"></ul>
                 </div>
             </div>
@@ -164,12 +164,12 @@
     </div>
 
     <script>
-        // §ó·s«áªº Google Apps Script URL
+        // æ›´æ–°å¾Œçš„ Google Apps Script URL
         const CLOUD_URL = "https://script.google.com/macros/s/AKfycbwdZimVpz1hykKklNkl5AyvlWdVZrt_5_9v7kfdXRmkBfg5WyGqC3JtsfQQp7doE-qH/exec";
 
         let settings = {
-            targets: ["¤÷¥À", "¦Ñ®v", "¦Û¤v", "¦a²y", "¥t¤@¥b"],
-            items: ["¨C¤Ñ¦­ºÎ¦­°_", "¤£¦A¶Ãªá¿ú", "¨C¶g¹B°Ê¤T¦¸", "·Ç®É¥æ§@·~"]
+            targets: ["çˆ¶æ¯", "è€å¸«", "è‡ªå·±", "åœ°çƒ", "å¦ä¸€åŠ"],
+            items: ["æ¯å¤©æ—©ç¡æ—©èµ·", "ä¸å†äº‚èŠ±éŒ¢", "æ¯é€±é‹å‹•ä¸‰æ¬¡", "æº–æ™‚äº¤ä½œæ¥­"]
         };
 
         let submissions = JSON.parse(localStorage.getItem('commitment_data')) || [];
@@ -198,13 +198,13 @@
             const itemSelect = document.getElementById('item-select');
             targetSelect.innerHTML = settings.targets.map(t => `<option value="${t}">${t}</option>`).join('');
             itemSelect.innerHTML = settings.items.map(i => `<option value="${i}">${i}</option>`).join('') + 
-                                  `<option value="¨ä¥L">¨ä¥L¡]¦Û¦æ¿é¤J¡^</option>`;
+                                  `<option value="å…¶ä»–">å…¶ä»–ï¼ˆè‡ªè¡Œè¼¸å…¥ï¼‰</option>`;
         }
 
         function toggleCustomInput() {
             const itemSelect = document.getElementById('item-select');
             const container = document.getElementById('custom-item-container');
-            container.classList.toggle('hidden', itemSelect.value !== '¨ä¥L');
+            container.classList.toggle('hidden', itemSelect.value !== 'å…¶ä»–');
         }
 
         async function generateCard() {
@@ -213,12 +213,12 @@
             const target = document.getElementById('target-select').value;
             let item = document.getElementById('item-select').value;
             
-            if (item === '¨ä¥L') {
+            if (item === 'å…¶ä»–') {
                 item = document.getElementById('custom-item-text').value.trim();
             }
 
             if (!name || !item) {
-                alert("½Ğ§¹¾ã¶ñ¼g©m¦W»P©Ó¿Õ¤º®e¡I");
+                alert("è«‹å®Œæ•´å¡«å¯«å§“åèˆ‡æ‰¿è«¾å…§å®¹ï¼");
                 return;
             }
 
@@ -228,7 +228,7 @@
             
             btn.disabled = true;
             loader.classList.remove('hidden');
-            btnText.innerText = "¤W¶Ç¶³ºİ¦sÀÉ¤¤...";
+            btnText.innerText = "ä¸Šå‚³é›²ç«¯å­˜æª”ä¸­...";
 
             const data = {
                 id: Math.floor(Math.random() * 900000) + 100000,
@@ -246,9 +246,9 @@
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(data)
                 });
-                console.log("¸ê®Æ¤w¦¨¥\´£¥æ¦Ü¶³ºİºŞ¹D");
+                console.log("è³‡æ–™å·²æˆåŠŸæäº¤è‡³é›²ç«¯ç®¡é“");
             } catch (e) {
-                console.warn("¶³ºİ´£¥æ¥¢±Ñ¡A¶È¦s©ó¥»¦a", e);
+                console.warn("é›²ç«¯æäº¤å¤±æ•—ï¼Œåƒ…å­˜æ–¼æœ¬åœ°", e);
             }
 
             submissions.push(data);
@@ -266,7 +266,7 @@
 
             btn.disabled = false;
             loader.classList.add('hidden');
-            btnText.innerText = "²£¥Í©Ó¿Õ¥d¨Ã¦P¨B";
+            btnText.innerText = "ç”¢ç”Ÿæ‰¿è«¾å¡ä¸¦åŒæ­¥";
             showView('result');
             nameInput.value = "";
         }
@@ -282,11 +282,11 @@
             localStorage.setItem('custom_items', itemsStr);
             
             loadDropdowns();
-            alert("¦W³æ³]©w¤w§ó·s¡I");
+            alert("åå–®è¨­å®šå·²æ›´æ–°ï¼");
         }
 
         function clearLocalData() {
-            if(confirm("½T©w­n²MªÅ¥»¦a¼Æ¾Ú¡H¡]¤£¼vÅT¤w¤W¶Ç¦Ü¶³ºİªº¸ê®Æ¡^")) {
+            if(confirm("ç¢ºå®šè¦æ¸…ç©ºæœ¬åœ°æ•¸æ“šï¼Ÿï¼ˆä¸å½±éŸ¿å·²ä¸Šå‚³è‡³é›²ç«¯çš„è³‡æ–™ï¼‰")) {
                 submissions = [];
                 localStorage.removeItem('commitment_data');
                 renderStats();
@@ -307,7 +307,7 @@
                     <span class="truncate pr-2 font-medium text-gray-700">?? ${item}</span>
                     <span class="bg-indigo-600 text-white px-3 py-1 rounded-full text-xs font-bold">${counts[item]}</span>
                 </div>
-            `).join('') || '<p class="text-xs text-gray-400 p-4 text-center">¥Ø«e©|µL©Ó¿Õ¼Æ¾Ú</p>';
+            `).join('') || '<p class="text-xs text-gray-400 p-4 text-center">ç›®å‰å°šç„¡æ‰¿è«¾æ•¸æ“š</p>';
 
             userList.innerHTML = [...submissions].reverse().map(s => `
                 <li class="py-4">
@@ -316,11 +316,11 @@
                         <span class="text-[10px] text-gray-400 bg-gray-100 px-2 py-0.5 rounded">ID: ${s.id}</span>
                     </div>
                     <div class="text-xs text-gray-600 mt-2">
-                        ¹ï <span class="font-bold text-gray-800">${s.target}</span> ©Ó¿Õ¡G
-                        <div class="mt-1 p-2 bg-indigo-50 rounded italic">¡u${s.item}¡v</div>
+                        å° <span class="font-bold text-gray-800">${s.target}</span> æ‰¿è«¾ï¼š
+                        <div class="mt-1 p-2 bg-indigo-50 rounded italic">ã€Œ${s.item}ã€</div>
                     </div>
                 </li>
-            `).join('') || '<li class="py-4 text-center text-gray-400">¥Ø«e²M³æ¬°ªÅ</li>';
+            `).join('') || '<li class="py-4 text-center text-gray-400">ç›®å‰æ¸…å–®ç‚ºç©º</li>';
         }
     </script>
 </body>
