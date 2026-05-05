@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>心願承諾卡 - 雲端同步版</title>
+    <title>心願承諾卡 - 雲端自動同步版</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
     <style>
@@ -46,7 +46,7 @@
 
     <!-- 導航欄 -->
     <nav class="bg-white shadow-sm mb-6 p-4 flex justify-between items-center sticky top-0 z-50">
-        <h1 class="text-xl font-bold text-indigo-600">? 承諾之約 (雲端同步)</h1>
+        <h1 class="text-xl font-bold text-indigo-600">✨ 承諾之約 (雲端同步)</h1>
         <div class="space-x-2">
             <button onclick="showView('user')" class="px-3 py-1 rounded bg-indigo-100 text-indigo-700 text-sm">參與端</button>
             <button onclick="showView('admin')" class="px-3 py-1 rounded bg-gray-100 text-gray-700 text-sm">管理與統計</button>
@@ -109,7 +109,7 @@
 
                 <div class="mt-12 flex justify-between items-end border-t pt-6">
                     <div class="text-xs text-gray-400">
-                        <p>千禧備案編號: #<span id="res-id"></span></p>
+                        <p>雲端備案編號: #<span id="res-id"></span></p>
                         <p>Status: Cloud Synchronized</p>
                     </div>
                     <div class="w-16 h-16 bg-gray-100 flex items-center justify-center rounded">
@@ -125,30 +125,30 @@
         <!-- 視圖：管理端與排行榜 -->
         <div id="view-admin" class="view-section hidden">
             <div class="bg-green-600 text-white rounded-2xl p-6 shadow-md mb-6">
-                <h3 class="font-bold text-lg mb-2 flex items-center gap-2">? 雲端服務已啟動</h3>
+                <h3 class="font-bold text-lg mb-2 flex items-center gap-2">✅ 雲端服務已啟動</h3>
                 <p class="text-xs text-green-100">目前資料將同步至您的最新 Google Apps Script 網址。</p>
             </div>
 
             <div class="bg-white rounded-2xl p-6 shadow-md mb-6">
-                <h3 class="font-bold text-lg mb-4 border-b pb-2">?? 基礎設定</h3>
+                <h3 class="font-bold text-lg mb-4 border-b pb-2">⚙️ 基礎設定</h3>
                 <div class="space-y-4">
                     <div>
                         <label class="text-sm text-gray-500 font-bold">被承諾對象 (逗號分隔)</label>
-                        <input type="text" id="admin-targets" class="w-full p-2 border rounded text-sm mt-1" value="寶眷,千禧社,自己,其他">
+                        <input type="text" id="admin-targets" class="w-full p-2 border rounded text-sm mt-1" value="父母,老師,自己,地球,另一半">
                     </div>
                     <div>
                         <label class="text-sm text-gray-500 font-bold">預設承諾項目 (逗號分隔)</label>
-                        <input type="text" id="admin-items" class="w-full p-2 border rounded text-sm mt-1" value="幫洗腳一次,這週的洗碗我包了,這週的洗衣服我包了,這週的拖地我包了,其他">
+                        <input type="text" id="admin-items" class="w-full p-2 border rounded text-sm mt-1" value="每天早睡早起,不再亂花錢,每週運動三次,準時交作業">
                     </div>
                     <button onclick="updateSettings()" class="bg-indigo-600 text-white px-4 py-2 rounded text-sm w-full font-bold shadow-md">更新名單設定</button>
                 </div>
                 <div class="mt-4 pt-4 border-t">
-                    <button onclick="clearLocalData()" class="text-red-500 text-xs hover:underline">?? 清空本地暫存數據 (不影響雲端)</button>
+                    <button onclick="clearLocalData()" class="text-red-500 text-xs hover:underline">⚠️ 清空本地暫存數據 (不影響雲端)</button>
                 </div>
             </div>
 
             <div class="bg-white rounded-2xl p-6 shadow-md">
-                <h3 class="font-bold text-lg mb-4">?? 活動即時報表 (由少至多)</h3>
+                <h3 class="font-bold text-lg mb-4">📊 活動即時報表 (由少至多)</h3>
                 
                 <div class="mb-6">
                     <h4 class="text-sm font-bold text-gray-400 mb-2 uppercase tracking-tighter">熱門承諾項統計</h4>
@@ -304,7 +304,7 @@
 
             statsContainer.innerHTML = sortedItems.map(item => `
                 <div class="flex items-center justify-between text-sm bg-gray-50 p-3 rounded-lg border border-gray-100">
-                    <span class="truncate pr-2 font-medium text-gray-700">?? ${item}</span>
+                    <span class="truncate pr-2 font-medium text-gray-700">📍 ${item}</span>
                     <span class="bg-indigo-600 text-white px-3 py-1 rounded-full text-xs font-bold">${counts[item]}</span>
                 </div>
             `).join('') || '<p class="text-xs text-gray-400 p-4 text-center">目前尚無承諾數據</p>';
