@@ -1,14 +1,18 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-Hant-TW">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>心願承諾卡 - 雲端自動同步版</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap');
-        body { font-family: 'Noto Sans TC', sans-serif; background: #f0f2f5; }
+        body { 
+            font-family: 'Noto Sans TC', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; 
+            background: #f0f2f5; 
+        }
         .card-gradient { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
         .commitment-card {
             background: white;
@@ -234,9 +238,7 @@
                 date: new Date().toLocaleString('zh-TW')
             };
 
-            // 執行 Google Apps Script 上傳
             try {
-                // 使用 fetch 發送資料，mode: 'no-cors' 確保跨域請求能發出
                 await fetch(CLOUD_URL, {
                     method: 'POST',
                     mode: 'no-cors',
@@ -249,7 +251,6 @@
                 console.warn("雲端提交失敗，僅存於本地", e);
             }
 
-            // 更新本地資料與 UI
             submissions.push(data);
             localStorage.setItem('commitment_data', JSON.stringify(submissions));
 
